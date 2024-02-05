@@ -17,6 +17,6 @@ jobs:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: "3c1d05490331b3d39a90cda6a9efe895"
           projectName: client-technoligy-les-1
-          directory: ""
+          directory: "./"
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}
           branch: Main
