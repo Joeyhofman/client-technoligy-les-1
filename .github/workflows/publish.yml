@@ -1,0 +1,22 @@
+on: [push]
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      deployments: write
+    name: Publish to Cloudflare Pages
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Publish to Cloudflare Pages
+        uses: cloudflare/pages-action@v1
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: 3c1d05490331b3d39a90cda6a9efe895
+          projectName: client-technoligy-les-1
+          directory: ""
+          gitHubToken: ${{ secrets.GITHUB_TOKEN }}
+          branch: Main
