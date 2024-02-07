@@ -68,6 +68,66 @@
     font-size: 14px;
 }
 
+
+/* cookie popup content */
+.cookie-concent {
+    position: fixed;
+    bottom: 1rem;
+    width: 100vw;
+    padding: 1rem;
+    background-color: #333;
+    transition: all 0.5s;
+}
+
+.cookie-concent > p {
+    margin-top: 0;
+    color: white;
+}
+
+.cookie-concent__options {
+    display: flex;
+    justify-content: center;
+    gap: 0.7rem
+}
+
+.button-success {
+    color: #fff;
+    font-size: 1.15rem;
+    padding: 0.25rem 0.5rem;
+    background-color: #28a745;
+    border-color: #28a745;
+}
+
+.button-success:hover {
+    color: #fff;
+    background-color: #218838;
+    border-color: #1e7e34;
+}
+
+.button-secondary {
+    font-size: 1.15rem;
+    padding: 0.25rem 0.5rem;
+    color: #fff;
+    background-color: #393d42;
+    border-color: #5b6269;
+    transition: all 1s;
+}
+
+.button-secondary:hover {
+    color: #fff;
+    background-color: #4c5258;
+    border-color: #43494e;
+}
+
+.cookie-concent-title{
+    color: white;
+    padding: 0;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0.5rem 0;
+}
+
+
 @media only screen and (min-width: 800px) {
 
     .page {
@@ -103,8 +163,11 @@
         display: flex;
     }
 
+    .cookie-concent__options {
+        justify-content: start;
+    }
+
 }
 
 
 /*student uitwerking*/
-
