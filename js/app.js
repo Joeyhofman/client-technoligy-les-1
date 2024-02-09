@@ -1,3 +1,4 @@
 import { GDPR } from "./GDPR.js";
 
-new GDPR();
+const gdpr = new GDPR();
+console.log(gdpr.getCookieStatus());
