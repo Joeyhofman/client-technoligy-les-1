@@ -95,7 +95,8 @@
     bottom: 0.7rem;
     width: 100vw;
     padding: 1rem;
-    background-color: #333;
+    background-color: rgb(152, 45, 41);
+    box-shadow:  0px 4px 16px rgba(0, 0, 0, 0.4);
     transition: all 0.5s;
 }
 
@@ -114,14 +115,14 @@
     border-radius: 100vmax;
     font-size: 1.15rem;
     padding: 0.25rem 0.75rem;
-    background-color: #28a745;
-    border-color: #28a745;
+    background-color: #188732;
+    border-color: #12802c;
 }
 
 .button-success:hover {
     color: #fff;
-    background-color: #218838;
-    border-color: #1e7e34;
+    background-color: #0f481b;
+    border-color: #0f5f21;
 }
 
 .button-secondary {
