@@ -25,15 +25,10 @@ class GDPR {
 
     #handleCookieContentDisplay(){
         if(!this.#hasAcceptedGDPR()){
-            this.#setCookieContentAlert();
             this.#focusAcceptCookiesButton();
         }else{
             this.#removeCookieContent();
         }
-    }
-
-    #setCookieContentAlert() {
-        this.cookieContent.role = "alert";
     }
     
     #focusAcceptCookiesButton() {
