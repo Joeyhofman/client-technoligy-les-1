@@ -14,9 +14,11 @@ document.addEventListener("DOMContentLoaded", function() {
         if (content.style.height === '0px') {
           content.style.height = content.scrollHeight + 'px';
           trigger.setAttribute("aria-expanded", "true");
+          content.setAttribute("inert", "");
         } else {
             content.style.height = '0';
             trigger.setAttribute("aria-expanded", "false");
+            content.removeAttribute("inert", "");
         }
       });
     });
