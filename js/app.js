@@ -14,11 +14,11 @@ document.addEventListener("DOMContentLoaded", function() {
         if (content.style.height === '0px') {
           content.style.height = content.scrollHeight + 'px';
           trigger.setAttribute("aria-expanded", "true");
-          content.removeAttribute("inert", "");
+          content.removeAttribute("aria-hidden", "false");
         } else {
             content.style.height = '0';
             trigger.setAttribute("aria-expanded", "false");
-            content.setAttribute("inert", "");
+            content.setAttribute("aria-hidden", "true");
         }
       });
     });
