@@ -193,5 +193,50 @@
 
 }
 
+.profile-content-accordion {
+    position: relative;
+    display: block;
+    background-color: white;
+    border: 1px solid #e0e0e0;
+}
 
-/*student uitwerking*/
+
+.profile-content-accordion__item{
+    display: block;
+}
+
+.profile-content-accordion .profile-content-accordion__content {
+    display: block;
+    padding: 0;
+    height: 0;
+    overflow: hidden;
+    transition: height 0.5s ease, padding 0.3s linear;
+}
+
+.profile-content-accordion .profile-content-accordion__content p {
+    padding: 20px;
+    margin: 0;
+}
+
+.profile-content-accordion .profile-content-accordion__trigger {
+    text-decoration: none;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+    transition: all 0.1s;
+}
+
+.profile-content-accordion .profile-content-accordion__trigger:hover, .profile-content-accordion__trigger:focus {
+    filter: brightness(1.2);
+}
+
+
+.profile-content-accordion .profile-content-accordion__title {
+    position: relative;
+    display: block;
+    margin: 0;
+    padding: 10px;
+    font-size: 1rem;
+    background-color: #900;
+    color: white;
+    border:  1px solid #900;
+    width: 100%;
+}
