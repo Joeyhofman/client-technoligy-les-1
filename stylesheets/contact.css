@@ -1,0 +1,141 @@
+
+body{
+    background: rgb(172,9,31);
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-container {
+    width: 100%;
+    padding: 1.5rem;
+    background-color: #111;
+}
+
+.form-container__title {
+    color: white;
+}
+
+.form-container__label {
+    color: white;
+}
+
+.form-container > form > input, textarea {
+    margin-bottom: 0.2rem;
+}
+
+.form-container > form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-controls{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 1.2rem;
+}
+
+.error {
+    color: red;
+    font-size: 14px;
+    margin-bottom: 1rem;
+  }
+  
+  input:valid, textarea:invalid {
+    border: 2px solid red;
+  }
+  
+  input:valid, textarea:valid {
+    border: 2px solid green;
+  }
+
+  .success-message {
+    background-color: #7FFF7F;
+    color: #006400;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    display: none;
+    animation: fadeInOut 6s forwards;
+  }
+
+  @keyframes fadeInOut {
+    0% {
+      opacity: 0;
+    }
+    10% {
+      opacity: 1;
+    }
+    90% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+
+  .reapcha{
+    display: flex;
+    width: 100%;
+    margin-bottom: 1.5rem;
+  }
+
+  #submitButton:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+  }
+
+  #submitButton:disabled:hover{
+    color: #fff;
+    border-radius: 100vmax;
+    font-size: 1.15rem;
+    padding: 0.25rem 0.75rem;
+    background-color: #188732;
+    border-color: #12802c;
+  }
+
+  textarea {
+    resize: none;
+  }
+
+  
+  @keyframes fadeOut {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+      display: none;
+    }
+  }
+
+  .spinner {
+    display: none;
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    border-left-color: #fff;
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+    animation: spin 0.7s linear infinite;
+  }
+
+  .spinner-active {
+    display: inline-block;
+  }
+  
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  @media  screen and (min-width: 768px) {
+
+    .form-container {
+      width: 25%;
+    }
+    
+  }

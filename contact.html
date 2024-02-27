@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./stylesheets/style.css">
+    <link rel="stylesheet" href="./stylesheets/contact.css">
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <title>Contact</title>
+</head>
+<body>
+    <main>
+        <div class="container">
+            <div class="form-container">
+                <div class="success-message" aria-hidden="true" id="successMessage">
+                </div>
+                <form method="post" action="" id="contact-form" novalidate>
+                    <h1 class="form-container__title">Contact Joey Hofman</h1>
+            
+                    <label class="form-container__label" for="first_name">Voornaam: </label>
+                    <input type="text" name="FirstName" id="first_name" maxlength="60" required>
+                    <span class="error" id="first-name-errors" aria-live="polite"></span>
+                    
+                    <label class="form-container__label" for="last_name">achternaam: </label>
+                    <input type="text" name="LastName" id="last_name" maxlength="60" required>
+                    <span class="error" id="last-name-errors" aria-live="polite"></span>
+                    
+                    <label class="form-container__label" for="email">email: </label>
+                    <input type="email" name="Email" id="email" maxlength="80" required placeholder="mijnemail@gmail.com">
+                    <span class="error" id="email-errors" aria-live="polite"></span>
+                    
+                    <label class="form-container__label" for="phone_number">Telefoonnummer: </label>
+                    <input type="tel" name="PhoneNumber" id="phone_number" pattern="^\+?[0-9]+$" minlength="10" maxlength="12">
+                    <span class="error" id="phone-number-errors" aria-live="polite"></span>
+                    
+                    <label class="form-container__label" for="subject">Onderwerp: </label>
+                    <input type="text" name="Subject" id="subject" required maxlength="200">
+                    <span class="error" id="subject-errors" aria-live="polite"></span>
+                    
+                    <label class="form-container__label" for="message">Bericht: </label>
+                    <textarea name="Message" id="message" required maxlength="600" rows="6"></textarea>
+                    <span class="error" id="message-errors" aria-live="polite"></span>
+           
+                    <div class="reapcha">
+                        <div class="g-recaptcha" data-callback="recaptchaCallback" data-sitekey="6LeYsXIpAAAAAM0o-v_tF9pydZlKTkB_4zbY8-QE"></div>
+                    </div>
+
+                    <div class="form-controls">
+                        <button type="submit" class="button-success" id="submitButton" name="SubmitButton">
+                            Bericht versturen
+                            <span id="spinner" aria-hidden="true" class="spinner"></span>
+                        </button>
+                        <button type="reset" id="resetButton" class="button-sedonary" name="resetButton">leegmaken</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://www.google.com/recaptcha/api.js?render=explicit"
+    async defer>
+    </script>
+    <script src="./js/contactform.js" defer></script>
+</body>
+</html>
